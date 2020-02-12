@@ -109,19 +109,19 @@ public class StringsAndThings {
      *            countTriple("a") // Should return 0
      */
     public Integer countTriple(String input){
+        char check;
         int counter = 0;
         input = input.toLowerCase();
 
-        char[] ch = new char[input.length()];
-        for(int i = 0; i < input.length(); i++){
-            ch[i] = input.charAt(i);
-        }
+        char [] ch = input.toCharArray();
 
-        for(int i = 1; i < ch.length; i++) {
-            if(((ch[i] == ch[i - 1]) && (ch[i] == ch[i - 2]))){
-                counter++;
+        for (int i = 0; i < ch.length - 1; i++) {
+            check = ch[i];
+            if (ch[i] == check) {
+                if (ch[i] == check  && ch[i + 1] == check && ch[i + 2] == check) {
+                    counter++;
+                }
             }
-
         }
 
 
