@@ -118,7 +118,7 @@ public class StringsAndThings {
         for (int i = 0; i < ch.length - 1; i++) {
             check = ch[i];
             if (ch[i] == check) {
-                if (ch[i] == check  && ch[i + 1] == check && ch[i + 2] == check) {
+                if ((ch[i] == check)  && (ch[i + 1] == check) && (ch[i + 2] == check)) {
                     counter++;
                 }
             }
